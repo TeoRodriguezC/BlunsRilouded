@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://mxwmjigsbm6i"]
+
+[ext_resource type="Texture2D" uid="uid://darbdigjqac0s" path="res://dibujovos/gloovo.png" id="1_ol3gh"]
+
+[node name="PathFollow2D" type="PathFollow2D"]
+
+[node name="Gloovo" type="Sprite2D" parent="."]
+texture = ExtResource("1_ol3gh")
