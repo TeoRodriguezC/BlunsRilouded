@@ -10,6 +10,7 @@ _data = {
 point_count = 13
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(272, 145)
 
 [node name="Mapa" type="Sprite2D" parent="."]
 scale = Vector2(0.21, 0.21)
