@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dic3nxfwgct0"]
 
 [ext_resource type="Texture2D" uid="uid://tmdigdls0ylr" path="res://dibujovos/mapa.png" id="1_rrkau"]
-[ext_resource type="PackedScene" uid="uid://mxwmjigsbm6i" path="res://objetovos/globoperro.tscn" id="2_j0cq3"]
+[ext_resource type="Script" path="res://objetovos/inflador.gd" id="2_r450e"]
 
 [sub_resource type="Curve2D" id="Curve2D_fi60d"]
 _data = {
@@ -9,16 +9,21 @@ _data = {
 }
 point_count = 13
 
-[node name="Node2D" type="Node2D"]
-position = Vector2(272, 145)
+[node name="nibel" type="Node2D"]
 
 [node name="Mapa" type="Sprite2D" parent="."]
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_rrkau")
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="caminito" type="Path2D" parent="."]
 curve = SubResource("Curve2D_fi60d")
 
-[node name="PathFollow2D" parent="Path2D" instance=ExtResource("2_j0cq3")]
-position = Vector2(-233, -20)
-rotation = 0.00485433
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.85, 2.85)
+
+[node name="inflador" type="Node" parent="."]
+script = ExtResource("2_r450e")
+
+[node name="Timer" type="Timer" parent="inflador"]
+wait_time = 0.5
+autostart = true

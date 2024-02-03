@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://darbdigjqac0s" path="res://dibujovos/gloovo.png" id="1_ol3gh"]
 [ext_resource type="Script" path="res://objetovos/globoperro.gd" id="1_vbet5"]
 
-[node name="PathFollow2D" type="PathFollow2D"]
+[node name="globoPerro" type="PathFollow2D"]
+rotates = false
 script = ExtResource("1_vbet5")
 
 [node name="Gloovo" type="Sprite2D" parent="."]
