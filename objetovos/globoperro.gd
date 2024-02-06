@@ -3,6 +3,7 @@ class_name Perro
 @onready var gloovo : Sprite2D = $Gloovo
 var colores : Array [Color] = [Color.CRIMSON,Color.LIME_GREEN, Color.ROYAL_BLUE]
 var vida: int=0
+signal llegueAlFin
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,4 +20,5 @@ func actualizarColor():
 	modulate = colores[vida]
 	
 func fin():
+	llegueAlFin.emit(vida+1)
 	queue_free()
